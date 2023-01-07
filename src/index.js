@@ -7,7 +7,7 @@ const resolve = require('path').resolve;
 
 var { execSync } = require("child_process");
 
-const gitCommand = 'git rev-list --remotes --format="CommitHash:%H%nAuthor:%an%nEmail:%ae%nCommitterAuthor:%cn%nCommitterEmail:%ce%nDate:%ct%nMessage:%s"';
+const gitCommand = 'git rev-list HEAD --remotes --format="CommitHash:%H%nAuthor:%an%nEmail:%ae%nCommitterAuthor:%cn%nCommitterEmail:%ce%nDate:%ct%nMessage:%s"';
 
 var hasNewCommitsWithinTime = false;
 var numberOfCommitsWithinTime = 0;
